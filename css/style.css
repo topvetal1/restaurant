@@ -20,8 +20,8 @@ body {
     background-attachment: fixed;
 }
 .full {
-    width: 100wh;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .bgimg {
@@ -94,15 +94,20 @@ body {
 }
 .menu_item_name {
     width: 1em;
-    line-height: 80px;
+    line-height: 1.7em;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     position: absolute;
-    left: 65px;
+    left: 75px;
     margin-top: 180px;
     color: #ffa60d;
 }
 /*==============================================================================*/
 
-
+@media only screen and (max-width: 1366px) {
+    .menu_item_name {
+        font-size: 30px;
+        line-height: 50px;
+    }
+}
 
