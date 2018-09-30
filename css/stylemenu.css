@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+*,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Comfortaa', cursive;
+    /*    font-family: 'Muli', sans-serif;*/
+}
+
+a {
+    color: #eee;
+    text-decoration: none;
+}
+
+.full {
+    width: 100wh;
+    height: 100vh;
+}
+
+.bgimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    /*    padding-bottom: 120px;*/
+}
+
+.menu_top {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+    position: relative;
+    /*    background: #000;*/
+}
+
+.menu_top nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*    height: 100%;*/
+    /*    width: auto;*/
+}
+
+.menu_top ul li {
+    font-size: 20px;
+    height: 70px;
+    width: 300px;
+    color: #eee;
+    padding-top: 12px;
+    text-align: center;
+}
+
+.menu_top ul li:hover {
+    cursor: pointer;
+    background: #010;
+}
+
+.menu_top ul li span {
+    color: greenyellow;
+    font-size: 13px;
+}
+
+#zakaz {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    color: #fff;
+    z-index: 10000;
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*    background: #000;*/
+}
+
+.z_list {
+    width: 100%;
+    display: none;
+    background: #010;
+}
+
+#zakaz ul li {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    /*    justify-content: center;*/
+    align-items: center;
+    padding: 0;
+}
+
+#zakaz ul li a {
+    color: red;
+}
+
+#zakaz ul li:hover {
+    cursor: auto;
+    background: none;
+}
+
+#zakaz .z_name {
+    font-size: 16px;
+    width: 60%;
+    text-align: left;
+    color: #ffa60d;
+    margin-left: 20px
+}
+
+#zakaz .z_price {
+    width: 25%;
+    color: greenyellow;
+    font-size: 15px;
+}
+
+#zakaz .z_h {
+    font-size: 20px;
+    padding: 15px 0;
+    width: 100%;
+    height: 70px;
+    /*    color: #ffa60d;*/
+}
+
+#zakaz .z_h:hover {
+    cursor: pointer;
+    background: #010;
+}
+
+#zakaz .z_p {
+    font-size: 15px;
+    padding: 20px 0;
+    color: greenyellow;
+}
+
+
+/*========================================LOGO=======================================*/
+
+.logo {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*    background: #212b34;*/
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), transparent);
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 300px;
+    /*  box-shadow: inset 5px 5px 20px rgba(255,255,255,0.1);*/
+    -webkit-animation: shimmy 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes shimmy {
+    0%,
+    100% {
+        transform: rotateY(0deg) skewX(0deg);
+    }
+    50% {
+        transform: rotateY(30deg) skewX(3deg);
+    }
+}
+
+.shine {
+    width: 1000px;
+    height: 100px;
+    margin-left: -100px;
+    transform: rotate(30deg);
+    background: -webkit-linear-gradient(top, transparent, rgba(200, 200, 200, 0.1), transparent);
+    position: absolute;
+    -webkit-animation: shine 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes shine {
+    0%,
+    100% {
+        margin-top: -300px;
+    }
+    50% {
+        margin-top: 100px;
+    }
+}
+
+.logo a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.logo a img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*==========================================================================*/
+
+.progress {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 190px;
+    color: #eee;
+    position: absolute;
+    top: 60px;
+    z-index: 9999;
+}
+
+.progress li a {
+    margin: 0 15px;
+}
+
+
+/*==================main==============================*/
+
+.main {
+    width: 100%;
+    height: 90%;
+/*    display: none;*/
+}
+
+.menu_item_name {
+    width: 1em;
+    line-height: 80px;
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    left: 70px;
+    margin-top: 180px;
+    color: #ffa60d;
+}
+
+.tovar {
+    width: 90%;
+    height: 80%;
+    margin-left: 170px;
+    position: relative;
+    /*    background: #000;*/
+}
+
+
+/*================================SWIPER SLIDER====================================*/
+
+.slider1 {
+    position: absolute;
+    width: 58%;
+    height: 700px;
+    margin-left: 390px;
+    top: 120px;
+    overflow: hidden;
+}
+
+.slider1 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.slider1 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-pagination-bullet {
+    background: greenyellow;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background: #ffa60d;
+}
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.slider2 {
+    position: absolute;
+    width: 88%;
+    margin-left: 200px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.slider2 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: rgba(0,0,0,.2);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.slider3 {
+    width: 20%;
+    height: 700px;
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    overflow: hidden;
+}
+.slider3 .swiper-slide {
+    background: #000;
+    opacity: .2;
+    text-align: center;
+    color: #fff;
+}
+.swiper-scrollbar-drag {
+    background: #ffa60d;
+    opacity: 1;
+}
+/*================================tovar_right==================================*/
+
+.tovar_right {
+    position: absolute;
+    height: 700px;
+    width: 320px;
+    background: #000;
+    opacity: .2;
+    top: 120px;
+    margin-left: 1400px;
+}
