@@ -25,6 +25,7 @@ body {
 }
 
 /*=================================LOGO=========================================*/
+/*Логотип кафешки*/
 .logo {
     width: 12%;
     height: 25%;
@@ -33,13 +34,11 @@ body {
     top: 0;
     /*    background: #212b34;*/
 }
-
-.logo__card {
+/*Ссылка логотипа*/
+.logo a {
     width: 100%;
     height: 100%;
-/*    background-color: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), transparent);*/
-    background: url(../img/night-coffee.png) no-repeat center;
-    background-size: 100%;
+    background: url(../img/night-coffee.png) no-repeat center/cover;
     overflow: hidden;
     position: absolute;
     border-radius: 50%;
@@ -58,12 +57,7 @@ body {
         transform: rotateY(30deg) skewX(3deg);
     }
 }
-/*
-.logo__card img {
-    width: 100%;
-    height: 100%;
-}
-*/
+/*Подсветка логотипа, которая катается*/
 .logo__shine {
     width: 700px;
     height: 100px;
@@ -83,6 +77,7 @@ body {
         margin-top: 100px;
     }
 }
+/*Основное название кафешки*/
 .logo__name {
     height: 74%;
     width: 12%;
@@ -100,7 +95,107 @@ body {
     font-size: 50px;
     color: #ffa60d;
 }
-/*==============================================================================*/
+/*============================BURGER MENU=======================================*/
+.menu__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*    position: relative;*/
+    width: 50px;
+    height: 50px;
+}
+.menu__button span, .menu__button span:before, .menu__button span:after {
+    background: #ffa60d;
+    display: block;
+    height: 4px;
+    position: relative;
+    width: 40px;
+    transition: all .3s ease;
+    border-radius: 2px;
+}
+.menu__button span:before, .menu__button span:after {
+    content: '';
+    position: absolute;
+}
+.menu__button span:before {
+    top: -13px;
+}
+.menu__button span:after {
+    top: 13px;
+}
+.open span {
+    background: transparent;
+}
+.open span:before, .open span:after {
+    background: #000;
+}
+.open span:before {
+    transform: translateX(16%) rotate(45deg);
+    transform-origin: top left;
+}
+.open span:after {
+    transform: translateX(16%) rotate(-45deg);
+    transform-origin: bottom left;
+}
+/*============================MENU=======================================*/
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu__item {
+    z-index: 2;
+    user-select: none;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    margin: 5px;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translate(0) rotate3d(0) scale(1);
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+.menu__item a {
+    width: 100%;
+    height: 100%;
+}
+.menu__item:hover {
+    transform: scale(1.1);
+}
+.menu__item:nth-of-type(2) {
+    background: url(../img/night%20coffee.jpg) no-repeat center/cover;
+    justify-content: center;
+}
+.menu__item:nth-of-type(3) {
+    background: url(../img/night%20coffee.jpg) no-repeat center/cover;
+    justify-content: center;
+}
+.menu__item:nth-of-type(4) {
+    background: url(../img/night%20coffee.jpg) no-repeat center/cover;
+    justify-content: center;
+}
+.menu__item:nth-of-type(5) {
+    background: url(../img/night%20coffee.jpg) no-repeat center/cover;
+    justify-content: center;
+}
+.menu__item:nth-of-type(6) {
+    background: url(../img/night%20coffee.jpg) no-repeat center/cover;
+    justify-content: center;
+}
+.menu__item.animate {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/*====================================@MEDIA==========================================*/
 
 @media only screen and (max-width: 1680px) {
     .logo__name p {
