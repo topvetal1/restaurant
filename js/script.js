@@ -7,7 +7,7 @@ $(document).ready(function() {
         if ($(this).attr('data-click') == 0) {
             $(this).attr('data-click', 1);
             setTimeout(function() {
-                Array.from(itemFlip).forEach((item, i) => {
+                Array.from(itemFlip).forEach(async (item, i) => {
                     setTimeout(() => item.classList.add('animate'), i * 100);
                 });
             }, 100);
