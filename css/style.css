@@ -238,12 +238,10 @@ nav {
 }
 .item {
     margin: 0.2%;
-    height: 60px;
+    height: 50px;
     width: 60px;
     position: relative;
 /*    background: rgba(0,0,0,.3);*/
-    border-radius: 3px;
-    border-radius: 50%;
 }
 
 .item a {
@@ -297,17 +295,18 @@ nav {
 .item:hover, .item.active {
     /*    transform: scaleX(1.05);*/
     transition: 200ms;
-    box-shadow: 0 0 1em #88cc24;
+/*    box-shadow: 0 0 1em #88cc24;*/
 /*    background: rgba(0,0,0, 0.5);*/
 }
 .item:hover a, .item.active a {
-    background-size: 110%;
+    background-size: 130%;
 }
 
 /*===============================GOODS===================================*/
 .all {
     text-align: center;
     padding-top: 5%;
+    height: auto;
 }
 .all h2 {
     text-transform: uppercase;
