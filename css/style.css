@@ -167,7 +167,7 @@ nav {
     align-items: center;
     position: fixed;
     right: 0.5%;
-    top: 1%;
+    top: .2%;
     z-index: 200;
 }
 .menu {
@@ -175,18 +175,20 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 40px;
+    height: auto;
 }
 .menu_item {
     z-index: 2;
     user-select: none;
     height: 40px;
-    width: 40px;
+    width: 100%;
     display: none;
-    margin: 5px;
+    margin-top: 5px;
 }
 .menu_item a {
     width: 100%;
-    height: 100%;
+    height: 40px;
     position: absolute;
 }
 .menu_item:hover {
@@ -194,22 +196,14 @@ nav {
     transition:  200ms;
 }
 .menu_item:nth-of-type(2) {
-    background: url(../img/night%20coffee.jpg) no-repeat center/cover;
+    background: url(../img/kichen.jpg) no-repeat center/80%;
     justify-content: center;
 }
 .menu_item:nth-of-type(3) {
-    background: url(../img/night%20coffee.jpg) no-repeat center/cover;
+    background: url(../img/bar.jpg) no-repeat center/cover;
     justify-content: center;
 }
 .menu_item:nth-of-type(4) {
-    background: url(../img/night%20coffee.jpg) no-repeat center/cover;
-    justify-content: center;
-}
-.menu_item:nth-of-type(5) {
-    background: url(../img/night%20coffee.jpg) no-repeat center/cover;
-    justify-content: center;
-}
-.menu_item:nth-of-type(6) {
     background: url(../img/night%20coffee.jpg) no-repeat center/cover;
     justify-content: center;
 }
