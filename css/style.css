@@ -189,7 +189,7 @@ nav {
 }
 .menu_item a {
     width: 100%;
-    height: 40px;
+    height: 60px;
     position: absolute;
 }
 .span {
@@ -223,11 +223,11 @@ nav {
     justify-content: center;
 }
 .menu_item:nth-of-type(5) {
-    background: url(/img/phone.png) no-repeat center/cover;
+    background: url(../img/phone.png) no-repeat center/cover;
     justify-content: center;
 }
 .menu_item:nth-of-type(6) {
-    background: url(/img/location.png) no-repeat center/cover;
+    background: url(../img/location.png) no-repeat center/cover;
     justify-content: center;
 }
 /*=====================================MAIN=========================================*/
@@ -249,8 +249,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0, .7);
-    background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.3));
+/*    background: #000;*/
+    background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.6));
     z-index: 100;
 }
 .item {
