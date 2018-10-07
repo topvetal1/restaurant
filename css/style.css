@@ -232,13 +232,23 @@ nav {
 }
 /*=====================================MAIN=========================================*/
 .main {
-    width: 78%;
-    position: relative;
-    height: 3000px;
-    margin: auto;
+    width: 100%;
+/*    position: relative;*/
+/*    height: 3000px;*/
+/*    margin: auto;*/
+/*    padding: 0 10%;*/
 /*    background: #000;*/
 /*    position: absolute;*/
 /*    top: 0;*/
+}
+.main_kitchen {
+    display: none;
+}
+.main_bar {
+    display: none;
+}
+.main.block {
+    display: block;
 }
 .top_memu {
     position: fixed;
@@ -253,7 +263,7 @@ nav {
     background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.6));
     z-index: 100;
 }
-.item {
+.item, .item_bar {
     margin: 0.2%;
     height: 50px;
     width: 60px;
@@ -261,7 +271,7 @@ nav {
 /*    background: rgba(0,0,0,.3);*/
 }
 
-.item a {
+.item a, .item_bar a {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -269,15 +279,15 @@ nav {
     left: 0;
     user-select: none;
 }
-.item:nth-of-type(1) a {
+.item:nth-of-type(1) a, .item_bar:nth-of-type(1) a {
     background: url(../menu/img/pizza/pizza.png) no-repeat center/cover;
     justify-content: center;
 }
-.item:nth-of-type(2) a {
+.item:nth-of-type(2) a, .item_bar:nth-of-type(2) a {
     background: url(../menu/img/soup/soup.png) no-repeat center/cover;
     justify-content: center;
 }
-.item:nth-of-type(3) a {
+.item:nth-of-type(3) a, .item_bar:nth-of-type(3) a {
     background: url(../menu/img/salad/salad.png) no-repeat center/cover;
     justify-content: center;
 }
@@ -309,13 +319,13 @@ nav {
     background: url(../menu/img/bl/bl.png) no-repeat center/cover;
     justify-content: center;
 }
-.item:hover, .item.active {
+.item:hover, .item.active, .item_bar:hover, .item_bar.active {
     /*    transform: scaleX(1.05);*/
     transition: 200ms;
 /*    box-shadow: 0 0 1em #88cc24;*/
 /*    background: rgba(0,0,0, 0.5);*/
 }
-.item:hover a, .item.active a {
+.item:hover a, .item.active a, .item_bar:hover a, .item_bar.active a {
     background-size: 130%;
 }
 
@@ -324,6 +334,7 @@ nav {
     text-align: center;
     padding-top: 5%;
     height: auto;
+    margin: 0 13%;
 }
 .all h2 {
     text-transform: uppercase;

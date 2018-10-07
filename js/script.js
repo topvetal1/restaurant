@@ -24,32 +24,45 @@ $(document).ready(function() {
             });
         }
     });
-    //Click and animation top menu
-    $('.item a').on('click', function(e) {
+    $('.menu_item a').click(function (e) {
         e.preventDefault();
         var _this = $(this),
-            item = _this.closest('.item'),
-            direction = _this.attr('href').replace('#', ''),
-            reqSection = $('.all').filter('[data-target="' + direction + '"]'),
-            reqSecPos = reqSection.offset().top;
-        $('html, body').animate({
-            scrollTop: reqSecPos
-        }, 500);
-    })
-    $(window).on('scroll', function() {
-        $('.all').each(function(){
-            var _this = $(this),
-                topSection = _this.offset().top,
-                botSection = topSection + _this.height(),
-                wScroll = $(window).scrollTop(),
-                wHeight = $(window).height()/2
-            if((topSection - wHeight < wScroll) && (botSection - wHeight > wScroll)) {
-                var id = _this.index(),
-                    stroka = _this.attr('data-target'),
-                    reqItem = $('.item a').eq(id);
-                reqItem.closest('.item').addClass('active').siblings().removeClass('active');
-                window.location.hash = stroka;
-            }
-        });
+            href = _this.attr('href').replace('#', ''),
+            sect = $('.main').filter('[data-target="'+href+'"]');
+        sect.siblings('.main').fadeOut(500);
+        sect.delay(350).fadeIn(500);
+        console.log(href);
+        scrollMenu($('.item a'), '.item');
+        scrollMenu($('.item_bar a'), '.item_bar');
     });
+    function scrollMenu (item_a, item) {
+        //Click and animation top menu
+        item_a.on('click', function(e) {
+            e.preventDefault();
+            var _this = $(this),
+                item = _this.closest(item),
+                direction = _this.attr('href').replace('#', ''),
+                reqSection = $('.all').filter('[data-target="' + direction + '"]'),
+                reqSecPos = reqSection.offset().top;
+            $('html, body').animate({
+                scrollTop: reqSecPos
+            }, 500);
+        })
+        $(window).on('scroll', function() {
+            $('.all').each(function(){
+                var _this = $(this),
+                    topSection = _this.offset().top,
+                    botSection = topSection + _this.height(),
+                    wScroll = $(window).scrollTop(),
+                    wHeight = $(window).height()/2
+                if((topSection - wHeight < wScroll) && (botSection - wHeight > wScroll)) {
+                    var id = _this.index()-1,
+                        stroka = _this.attr('data-target'),
+                        reqItem = item_a.eq(id);
+                    reqItem.closest(item).addClass('active').siblings().removeClass('active');
+                    window.location.hash = stroka;
+                }
+            });
+        });
+    }
 })
