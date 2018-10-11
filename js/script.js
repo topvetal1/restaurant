@@ -32,9 +32,15 @@ $(document).ready(function() {
         sect.siblings('.main').fadeOut(500);
         sect.delay(350).fadeIn(500);
         console.log(href);
+<<<<<<< HEAD
     });
     scrollMenu($('.item a'), '.item');
     scrollMenu($('.item_bar a'), '.item_bar');
+=======
+        scrollMenu($('.item a'), '.item');
+        scrollMenu($('.item_bar a'), '.item_bar');
+    });
+>>>>>>> cc48a34e7ea8562e5f164b4ea95d3b4874c10de4
     function scrollMenu (item_a, item) {
         //Click and animation top menu
         item_a.on('click', function(e) {
