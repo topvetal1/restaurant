@@ -2,7 +2,10 @@ $(document).ready(function() {
     var itemFlip = document.querySelectorAll('.menu_item');
     var topItem = $('top_memu a');
     //Анимация бургера
-    $('.menu_button').click(function() {
+    $('.logo').click(function() {
+        $('body,html').animate({scrollTop:0},800);
+    });
+        $('.menu_button').click(function() {
         $(this).toggleClass('open');
         //Анимация итемов меню бургера
         if ($(this).attr('data-click') == 0) {
@@ -31,7 +34,17 @@ $(document).ready(function() {
             sect = $('.main').filter('[data-target="'+href+'"]');
         sect.siblings('.main').fadeOut(500);
         sect.delay(350).fadeIn(500);
-        console.log(href);
+        $('.menu_button').toggleClass('open');
+            //Анимация итемов меню бургера
+        if ($('.menu_button').attr('data-click') == 0) {
+            $('.menu_button').attr('data-click', 1);
+            $('.menu_item').each(function(i) {
+                var self = $('.menu_item');
+                setTimeout(function () {
+                    self.hide(200);
+                }, i * 200);
+            });
+        }
     });
     scrollMenu($('.item a'), '.item');
     scrollMenu($('.item_bar a'), '.item_bar');
@@ -65,4 +78,10 @@ $(document).ready(function() {
             });
         });
     }
+    $( ".call" ).mouseenter(function() {
+        $( '.message' ).fadeTo(300, 1);
+        console.log($( '.message' ));
+    }).mouseleave(function() {
+        $( '.message' ).fadeTo(300, 0);
+    });
 })
